@@ -1,0 +1,17 @@
+<h1></h1>
+<%= link_to 'My Blog', controller: 'users' %>
+<%= link_to 'New user', new_user_path %>
+
+<table>
+
+  <% @users.each do |user| %>
+     <tr colspan="3">
+        <td colspan="1" rowspan="1"><%= user.name %></td>
+        <td colspan="2"><%= user.text %></td>
+      </tr>
+      <tr>
+
+        <td colspan="1" rowspan="1"><%= user.surname %></td>
+      </tr>
+<% end %>
+</table>
