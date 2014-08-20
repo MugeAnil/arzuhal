@@ -2,7 +2,9 @@ Rails.application.routes.draw do
   get 'welcome/index'
 
 
-    resources :users
+    resources :users do
+   resources :comments
+  end
 
     root 'welcome#index'
 

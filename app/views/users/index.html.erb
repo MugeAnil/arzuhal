@@ -1,5 +1,5 @@
 <h1></h1>
-<%= link_to 'My Blog', controller: 'users' %>
+
 <%= link_to 'New user', new_user_path %>
 
 <table>
@@ -9,8 +9,10 @@
         <td><%= user.name %></td>
         <td><%= user.surname %></td>
         <td><%= user.text %></td>
-       <td><%= link_to 'Show', user_path(user) %></td>
-       <td><%= link_to 'Edit', edit_user_path(user) %></td>
+        <td><%= link_to 'Show', user_path(user) %></td>
+        <td><%= link_to 'Edit', edit_user_path(user) %></td>
+        <td><%= link_to 'Destroy', user_path(user),
+                       method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
 
   <% end %>
