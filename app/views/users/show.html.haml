@@ -1,0 +1,19 @@
+
+%p
+  %strong Name:
+  = @user.name
+%p
+  %strong Surname
+  = @user.surname
+%p
+  %strong E-mail
+  = @user.e_mail
+%p
+  %strong Text:
+  = @user.text
+%h2 Comments
+= render @user.comments
+%h2 Add a comment:
+= render "comments/form"
+= link_to 'Back', users_path
+= link_to 'Edit', edit_user_path(@user)
