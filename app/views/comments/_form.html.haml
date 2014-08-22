@@ -4,8 +4,9 @@
   %br/
   = f.text_field :commenter
  %p
-  = f.label :body
+  = f.label :comment
   %br/
   = f.text_area :body
  %p
-  = f.submit
+  = f.submit 'Create Comment',class: "btn btn-primary"
+
